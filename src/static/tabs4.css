@@ -1,0 +1,66 @@
+/* Style the tabs container */
+.tabs4 {
+  max-width: 100%;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Hide the radio buttons */
+.tabs4 input {
+  display: none;
+}
+
+/* Style the tab labels */
+.tabs4 ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs4 ul li {
+  flex: 1;
+}
+
+.tabs4 ul li label {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+
+.tabs4 ul li label:hover {
+  background: #ddd;
+}
+
+/* Style the tab content container */
+.tabs4 .content {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+/* Hide all sections by default */
+.tabs4 .content section {
+  display: none;
+}
+
+/* Show the section corresponding to the checked tab */
+#tab1:checked ~ .content #content1,
+#tab2:checked ~ .content #content2,
+#tab3:checked ~ .content #content3,
+#tab4:checked ~ .content #content4 {
+  display: block;
+}
+
+/* Highlight the active tab label */
+#tab1:checked + ul li:nth-child(1) label,
+#tab2:checked + ul li:nth-child(2) label,
+#tab3:checked + ul li:nth-child(3) label,
+#tab4:checked + ul li:nth-child(4) label {
+  background: white;
+  font-weight: bold;
+  border-bottom: 1px solid white; /* Connect the tab with the content */
+}

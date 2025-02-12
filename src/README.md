@@ -31,4 +31,3 @@ localhost:3000
 ## Foundry book reference
 
 https://github.com/foundry-rs/book
-
